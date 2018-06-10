@@ -27,6 +27,9 @@
     <ClInclude Include="Parser.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
+    <ClInclude Include="ServerConfig.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -38,5 +41,13 @@
     <ClCompile Include="Parser.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="ServerConfig.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="_ChatServer.cnf">
+      <Filter>소스 파일</Filter>
+    </None>
   </ItemGroup>
 </Project>

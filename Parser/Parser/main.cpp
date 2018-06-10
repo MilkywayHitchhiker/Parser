@@ -2,7 +2,7 @@
 //
 
 #include "stdafx.h"
-#include "Parser.h"
+#include "ServerConfig.h"
 
 int main()
 {
@@ -11,12 +11,7 @@ int main()
 	char p[30];
 	int MaxLength = 30;
 
-	Parser parser;
-	parser.LoadFile ("test.txt");
-	parser.SetArea ("2");
-	parser.GetValue ("Value",&Value);
-	parser.GetValue ("dou", &dou);
-	parser.GetValue ("char", p,&MaxLength);
+	CServerConfig::Initialize();
 
 
 

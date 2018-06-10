@@ -15,11 +15,15 @@ bool Parser::LoadFile (char *name)
 	Size = ftell (fp);
 	rewind (fp);
 
+	pWBuffer = new WCHAR[Size];
 	pBuffer = new char[Size];
 	
-	fread_s (pBuffer,Size,Size,1,fp);
+	fread_s (pWBuffer,Size,Size,1,fp);
 
 	fclose (fp);
+	
+	WideCharToMultiByte (CP_ACP, 0, pWBuffer, -1, pBuffer, Size, 0, 0);
+
 
 	return true;
 
@@ -332,5 +336,9 @@ bool  Parser::GetValue (char *name, double *p)
 
 	}
 	return false;
-	return true;
 }
+
+
+
+
+

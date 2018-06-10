@@ -1,8 +1,10 @@
 #include"stdafx.h"
+#include<Windows.h>
 
 class Parser
 {
 private:
+	WCHAR *pWBuffer;
 	char *pBuffer;
 	int Size;
 	int AreaStart;
